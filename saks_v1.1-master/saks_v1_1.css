@@ -2,13 +2,12 @@
 Sticky Footer - https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
 Fix Version 0.1.1 - https://github.com/jaydenseric/Fix/
 Micro Clearfix Hack - http://nicolasgallagher.com/micro-clearfix-hack/
-CSS Elastic Videos - http://webdesignerwall.com/tutorials/css-elastic-videos
+Responsive iFrames - https://benmarshall.me/responsive-iframes/
 */
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
--webkit-tap-highlight-color:transparent}
-body,html{height:100%}
+-webkit-tap-highlight-color:transparent;height:100%}
 /*Husk at deklarerer den font-familie/-familier, som I gerne vil anvende i HTML-filen*/
-body{margin:0;line-height:1;font-size:16px;color:#000;display:flex;flex-direction:column}
+body{margin:0;line-height:1;font-size:16px;color:#000;display:flex;flex-direction:column;height:100%}
 main,header,nav,section,article,footer{width:100%;max-width:100%}
 main{flex:1 0 auto}
 li,main{display:block}
@@ -22,11 +21,11 @@ a,a:active,a:visited{text-decoration:none;color:inherit}
 button{text-align:inherit;text-transform:inherit;
 font:inherit;-webkit-font-smoothing:inherit;letter-spacing:inherit;background:0 0;
 cursor:pointer;overflow:visible}
+
 ::-moz-focusinner{border:0;padding:0}
 .cf:after,.cf:before{content:" ";display:table}
 .cf:after{clear:both}
-/*Husk at deklarer "video-wrapper"-klassen inline til at benytte den højde I gerne vil have videoen på*/
-/*.video-wrapper{width:560px;max-width:100%}*/
-.video-container_1 {position:relative;padding-bottom:56.25%;padding-top:30px;height: 0;overflow:hidden}
-.video-container_2 {position:relative;padding-bottom:75%;padding-top:30px;height: 0;overflow:hidden}
-.video-container_1 iframe,.video-container_1 object,.video-container_1 embed,.video-container_2 iframe,.video-container_2 object,.video-container_2 embed{position:absolute;top:0;left:0;width:100%;height:100%}
+
+.iframe-container {overflow: hidden;padding-top: 56.25%;position:relative}
+  // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625) 
+.iframe-container iframe {border:0;height:100%;left: 0;position: absolute;top:0;width:100%}
