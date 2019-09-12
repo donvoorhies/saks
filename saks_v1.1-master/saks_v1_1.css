@@ -27,5 +27,5 @@ cursor:pointer;overflow:visible}
 .cf:after{clear:both}
 
 .iframe-container {overflow: hidden;padding-top: 56.25%;position:relative}
-  // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625) 
+  /* Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)*/ 
 .iframe-container iframe {border:0;height:100%;left: 0;position: absolute;top:0;width:100%}
